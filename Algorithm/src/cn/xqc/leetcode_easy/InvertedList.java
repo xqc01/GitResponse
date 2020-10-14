@@ -1,4 +1,4 @@
-package cn.xqc.leetcode;
+package cn.xqc.leetcode_easy;
 
 /**
  * 反转链表
