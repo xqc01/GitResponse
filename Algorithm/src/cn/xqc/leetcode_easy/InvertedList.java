@@ -26,8 +26,8 @@ public class InvertedList {
     }
 }
 class ListNode{
-    private int val;
-    private ListNode next;
+    public int val;
+    public ListNode next;
 
     public ListNode(){}
     public ListNode(int val){
