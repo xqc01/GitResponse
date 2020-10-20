@@ -1,4 +1,4 @@
-package cn.xqc.leetcode_easy;
+package cn.xqc.code_easy;
 
 /**
  * 二分查找：使用递归

@@ -1,4 +1,4 @@
-package cn.xqc.leetcode_easy;
+package cn.xqc.code_easy;
 
 /**
  * 寻找数组中第K大的数

@@ -1,4 +1,4 @@
-package cn.xqc.leetcode_easy;
+package cn.xqc.code_easy;
 
 /**
  * 判断链表是否有环：使用快慢指针，若快指针最终指向null，则无环；快指针追上慢指针，有环

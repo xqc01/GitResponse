@@ -1,4 +1,4 @@
-package cn.xqc.leetcode_easy;
+package cn.xqc.code_easy;
 
 /**
  * 删除链表中倒数第n个节点
