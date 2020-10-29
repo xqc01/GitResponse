@@ -51,10 +51,19 @@ public class Test {
 //        System.out.println(queueSimulateStack.pop());
 //        System.out.println(queueSimulateStack.pop());
 //        System.out.println(queueSimulateStack.pop());
-        UseXOR useXOR = new UseXOR();
+//        UseXOR useXOR = new UseXOR();
 //        System.out.println(useXOR.getLastOne(8));
-        int[] arr = {1, 2, 2, 1, 3, 3, 5, 5, 5, 4, 4, 6, 5, 2, 10, 10, 11, 2, 6, 12};
+//        int[] arr = {1, 2, 2, 1, 3, 3, 5, 5, 5, 4, 4, 6, 5, 2, 10, 10, 11, 2, 6, 12};
 //        System.out.println(useXOR.getOddNumber(arr));
-        System.out.println(Arrays.toString(useXOR.getTwoOddNumber(arr)));
+//        System.out.println(Arrays.toString(useXOR.getTwoOddNumber(arr)));
+//        String str = null;
+//        System.out.println(str);
+        PrefixTree prefixTree = new PrefixTree();
+        prefixTree.insert("abc");
+        prefixTree.insert("abc");
+        prefixTree.insert("abc");
+        prefixTree.insert("abcd");
+        prefixTree.delete("abcd");
+        System.out.println(prefixTree.search("abcd"));
     }
 }
