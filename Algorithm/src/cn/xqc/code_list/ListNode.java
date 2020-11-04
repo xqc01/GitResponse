@@ -37,4 +37,23 @@ public class ListNode {
                 "value=" + value +
                 '}';
     }
+
+    /**
+     * 生成有环链表
+     *
+     * @param arr   将要转换为链表的数组
+     * @param index 入环节点下标
+     * @return 链表头节点
+     */
+    public static ListNode generateLoopList(int[] arr, int index) {
+        ListNode[] nodes = new ListNode[arr.length];
+        for (int i = 0; i < arr.length; i++) {
+            nodes[i] = new ListNode(arr[i]);
+        }
+        for (int i = 0; i < nodes.length - 1; i++) {
+            nodes[i].next = nodes[i + 1];
+        }
+        nodes[nodes.length - 1].next = nodes[index];
+        return nodes[0];
+    }
 }

@@ -29,10 +29,30 @@ public class Test {
 //        System.out.println(huiLanguage.isHui3(node));
 //        ListNode node1 = huiLanguage.reverseList(node);
 //        Tools.printList(node1);
-        int[] arr = {1, 2, 3, 3, 1, 1, 4, 6, 7, 6, 3, 8, 8, 9, 6};
-        ListNode node = Tools.arrayToList(arr);
+//        int[] arr = {1, 2, 3, 3, 1, 1, 4, 6, 7, 6, 3, 8, 8, 9, 6};
+//        ListNode node = Tools.arrayToList(arr);
 //        System.out.println(Arrays.toString(Tools.listToArray(node)));
-        HollandFlagList hollandFlagList = new HollandFlagList();
-        Tools.printList(hollandFlagList.partition2(node, 3));
+//        HollandFlagList hollandFlagList = new HollandFlagList();
+//        Tools.printList(hollandFlagList.partition2(node, 3));
+//        RandomNextList randomNextList = new RandomNextList();
+//        RandomNextListNode randomNextListNode = RandomNextListNode.generateList(10);
+//        RandomNextListNode randomNextListNode1 = randomNextList.copyList2(randomNextListNode);
+//        RandomNextListNode.print(randomNextListNode1);
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8};
+        int[] arr2 = {2, 2, 3, 6, 7, 9};
+        int[] arr3 = {3, 2, 6, 9, 4};
+        ListNode node1 = Tools.arrayToList(arr);
+        ListNode node2 = Tools.arrayToList(arr2);
+        ListNode node3 = Tools.arrayToList(arr3);
+        ListNode node4 = ListNode.generateLoopList(arr,4);
+        node3 = Tools.linkList(node3,node4);
+        node1 = Tools.linkList(node1,node3);
+        node2 = Tools.linkList(node2,node3);
+        LastQuestion lastQuestion = new LastQuestion();
+        System.out.println(lastQuestion.isMeet(node1, node2));
+//        System.out.println(lastQuestion.noLoopIsMeet(node1, node2));
+//        Tools.printList(node, 10);
+//        ListNode loop = lastQuestion.isLoop(node);
+//        System.out.println();
     }
 }

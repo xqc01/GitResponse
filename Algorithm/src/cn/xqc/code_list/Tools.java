@@ -11,11 +11,12 @@ public class Tools {
         }
         return head;
     }
+
     //将链表转化为数组
-    public static int[] listToArray(ListNode head){
+    public static int[] listToArray(ListNode head) {
         int length = listSize(head);
         int[] arr = new int[length];
-        for (int i = 0; i < arr.length; i++){
+        for (int i = 0; i < arr.length; i++) {
             arr[i] = head.value;
             head = head.next;
         }
@@ -23,9 +24,9 @@ public class Tools {
     }
 
     //返回链表长度
-    public static int listSize(ListNode head){
+    public static int listSize(ListNode head) {
         int length = 0;
-        while (head != null){
+        while (head != null) {
             length++;
             head = head.next;
         }
@@ -42,9 +43,27 @@ public class Tools {
     }
 
     //交换数组中的两个数
-    public static void swap(int[] arr, int left, int right){
+    public static void swap(int[] arr, int left, int right) {
         int temp = arr[left];
         arr[left] = arr[right];
         arr[right] = temp;
+    }
+
+    //输出链表中length长度的节点
+    public static void printList(ListNode head, int length) {
+        for (; length > 0; length--) {
+            System.out.print(head.value+" ");
+            head = head.next;
+        }
+        System.out.println();
+    }
+    //拼接两个链表，返回头节点
+    public static ListNode linkList(ListNode head1, ListNode head2){
+        ListNode cur = head1;
+        while (cur.next != null){
+            cur = cur.next;
+        }
+        cur.next = head2;
+        return head1;
     }
 }
