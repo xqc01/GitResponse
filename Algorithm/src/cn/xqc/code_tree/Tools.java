@@ -1,5 +1,7 @@
 package cn.xqc.code_tree;
 
+import java.util.Queue;
+
 public class Tools {
 
     //根据数组生成完全二叉树
@@ -13,5 +15,12 @@ public class Tools {
             nodes[i].right = (i * 2 + 2) == arr.length ? null : nodes[i * 2 + 2];
         }
         return nodes[0];
+    }
+
+    //遍历队列
+    public static void printQueue(Queue queue){
+        while (!queue.isEmpty()){
+            System.out.println(queue.poll());
+        }
     }
 }
