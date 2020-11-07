@@ -23,4 +23,26 @@ public class Tools {
             System.out.println(queue.poll());
         }
     }
+
+    //打印二叉树:本质是递归序遍历  右  头  左
+    public static void printTree(TreeNode head){
+        if (head == null)
+            return;
+        int level = 1;
+        order(level,head);
+    }
+    public static void order(int level, TreeNode head){
+        if (head == null)
+            return;
+        order(level+1,head.right);
+        System.out.println(generateSpace(level)+head.value);
+        order(level+1,head.left);
+    }
+    public static String generateSpace(int i){
+        String str = "";
+        for (int n = 0; n < i; n++){
+            str = str + "    ";
+        }
+        return str;
+    }
 }
