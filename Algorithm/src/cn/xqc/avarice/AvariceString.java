@@ -22,18 +22,29 @@ public class AvariceString {
     }
 
     public void concatenatedProcess(String result, HashSet<Integer> hashSet, ArrayList<String> results, String[] strings) {
+        if (strings.length - hashSet.size() == 1){
+            for (int i = 0;i<strings.length;i++){
+                if (!hashSet.contains(i)){
+                    result = result + strings[i];
+                    results.add(result);
+                    System.out.println(result);
+                    return;
+                }
+            }
+        }
         for (int i = 0; i < strings.length; i++) {
-            if (hashSet.size() == strings.length) {
-                results.add(result);
-                return;
-            }
-            if (!hashSet.contains(i)) {
-                result = result + strings[i];
-                hashSet.add(i);
-                concatenatedProcess(result, hashSet, results, strings);
-                hashSet.remove(i);
-            }
-            System.out.println(result);
+            if (hashSet.contains(i))
+                continue;
+//            result = result + strings[i];
+            hashSet.add(i);
+            /**
+             * 此处应当注意：
+             * 返回后的恢复现场问题
+             * 不仅hashSet要remove，
+             * result字符串，如果向前面一样相加赋值，那就要删去之前加的字符串，将字符串还原
+             */
+            concatenatedProcess(result+strings[i],hashSet,results,strings);
+            hashSet.remove(i);
         }
     }
 
