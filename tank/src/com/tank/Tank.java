@@ -3,11 +3,11 @@ package com.tank;
 import java.awt.*;
 
 public class Tank {
-    private int x,y;
+    private int x, y;
     private Dir dir = Dir.DOWN;
     private static final int SPEED = 5;
 
-    private boolean moving =  false;
+    private boolean moving = false;
     private TankFrame tf;
 
     public Tank(int x, int y, Dir dir, TankFrame tf) {
@@ -34,15 +34,15 @@ public class Tank {
         this.moving = moving;
     }
 
-    public void paint(Graphics g){
+    public void paint(Graphics g) {
         Color c = g.getColor();
-        g.setColor(Color.YELLOW);
-        g.fillRect(x, y, 50, 50);
-        g.setColor(c);
+
+        g.drawImage(ResourceMgr.tankL, x, y, null);
+
         move();
     }
 
-    private void move(){
+    private void move() {
         if (!moving) return;
         switch (dir) {
             case LEFT:
@@ -60,7 +60,7 @@ public class Tank {
         }
     }
 
-    public void fire(){
-        tf.bullets.add(new Bullet(this.x, this.y, this.dir,this.tf));
+    public void fire() {
+        tf.bullets.add(new Bullet(this.x, this.y, this.dir, this.tf));
     }
 }
